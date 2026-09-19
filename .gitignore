@@ -3,3 +3,10 @@ desktop.ini
 .DS_Store
 *~
 *.tmp
+
+node_modules
+.next
+out
+.vercel
+*.log
+.env*
