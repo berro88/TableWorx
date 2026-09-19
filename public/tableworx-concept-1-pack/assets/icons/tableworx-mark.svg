@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" role="img" aria-label="TableWorx mark">
+  <circle cx="36" cy="36" r="35" fill="#fff"/>
+  <g stroke="#111923" stroke-width="4.1" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M21 20l31 32M52 20L21 52"/>
+    <path d="M18 18l11 11M22 16l9 11M26 15l8 10" stroke-width="2.4"/>
+    <path d="M47 24l9-9M45 26l11-9" stroke-width="2.4"/>
+  </g>
+</svg>

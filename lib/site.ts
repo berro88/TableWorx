@@ -38,16 +38,6 @@ export const capabilities = [
   { icon: "nodes", title: "Full Ecosystem", sub: "All devices. All connected." },
 ] as const;
 
-export const heroNodes = [
-  { icon: "calendar", label: "Orders", x: 12, y: 9 },
-  { icon: "card", label: "Payments", x: 27, y: 2 },
-  { icon: "box", label: "Tables", x: 44, y: 3 },
-  { icon: "cart", label: "Inventory", x: 61, y: 6 },
-  { icon: "staff", label: "Staff", x: 76, y: 11 },
-  { icon: "heart", label: "Loyalty", x: 85, y: 22 },
-  { icon: "chart", label: "Analytics", x: 93, y: 33 },
-] as const;
-
 export const pillars = [
   {
     id: "kds",

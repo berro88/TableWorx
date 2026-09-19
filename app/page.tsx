@@ -1,8 +1,18 @@
 import Link from "next/link";
 import { DemoForm } from "@/components/DemoForm";
-import { Icon } from "@/components/Icons";
 import { Lineup } from "@/components/Lineup";
 import { capabilities, pillars, steps } from "@/lib/site";
+
+const capabilityIconByKey: Record<string, string> = {
+  card: "payments",
+  cart: "ordering",
+  calendar: "reservations",
+  box: "inventory",
+  staff: "staff",
+  heart: "loyalty",
+  chart: "analytics",
+  nodes: "ecosystem",
+};
 
 export default function HomePage() {
   return (
@@ -47,7 +57,11 @@ export default function HomePage() {
         <div className="strip-grid">
           {capabilities.map((cap) => (
             <div className="cap" key={cap.title}>
-              <Icon name={cap.icon} />
+              <svg viewBox="0 0 40 40" aria-hidden="true">
+                <use
+                  href={`/tableworx-concept-1-pack/assets/icons/icon-sprite.svg#${capabilityIconByKey[cap.icon] ?? "payments"}`}
+                />
+              </svg>
               <b>{cap.title}</b>
               <span>{cap.sub}</span>
             </div>
@@ -55,90 +69,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="band" aria-label="Why restaurants choose TableWorx">
-        <article
-          className="panel panel-photo"
-          style={{ "--panel-photo": "url(/restaurant-dark.png)" } as React.CSSProperties}
-        >
-          <p className="cap-label">
-            Built
-            <br />
-            for restaurants
-            <br />
-            like yours
-          </p>
-          <h2>
-            Less admin.
-            <br />
-            More time
-            <em>for what matters.</em>
-          </h2>
-        </article>
-
-        <article className="panel panel-light panel-top">
-          <h2>
-            Power
-            <em>in your hands.</em>
-          </h2>
-          <p>
-            Take orders, accept payments and serve anywhere with the P5.
-          </p>
-          <p className="cap-label" style={{ marginTop: "auto" }}>
-            Mobile. Flexible.
-            <br />
-            Always connected.
-          </p>
-          <div className="hand" aria-hidden="true">
-            <div className="pay">
-              <span className="tick">✓</span>
-              Payment Complete
-              <b>R 210.00</b>
-            </div>
-          </div>
-        </article>
-
-        <article className="panel panel-dark panel-top">
-          <h2>
-            Real insights.
-            <em>Real growth.</em>
-          </h2>
-          <p>
-            Turn today’s service into a stronger tomorrow with powerful
-            analytics and reporting.
-          </p>
-          <div className="chart" aria-hidden="true">
-            <div className="chart-head">
-              <span>
-                Sales
-                <br />
-                <b>R 4,892</b>
-              </span>
-              <span style={{ color: "#7ee0b0" }}>▲ 12%</span>
-            </div>
-            <div className="bars">
-              {[34, 46, 40, 58, 52, 68, 60, 78, 72, 88, 82, 96].map((h, i) => (
-                <i key={i} style={{ height: `${h}%` }} />
-              ))}
-            </div>
-            <div className="chart-row">
-              <span>Orders 128</span>
-              <span>▲ 12%</span>
-            </div>
-            <div className="chart-row">
-              <span>New Guests 24</span>
-              <span>▲ 20%</span>
-            </div>
-            <div className="chart-row">
-              <span>Repeat Guests 64%</span>
-              <span>▲ 6%</span>
-            </div>
-          </div>
-          <p className="cap-label" style={{ marginTop: "0.6rem" }}>
-            Data that
-            <br />
-            drives progress.
-          </p>
-        </article>
+      <section className="band-crops" aria-label="Why restaurants choose TableWorx">
+        <object
+          data="/tableworx-concept-1-pack/assets/photography/chef-hospitality-panel.svg"
+          type="image/svg+xml"
+          aria-label="Built for restaurants like yours. Less admin. More time for what matters."
+        />
+        <object
+          data="/tableworx-concept-1-pack/assets/photography/mobile-hospitality-panel.svg"
+          type="image/svg+xml"
+          aria-label="Power in your hands. Take orders, accept payments and serve anywhere with the P5."
+        />
+        <object
+          data="/tableworx-concept-1-pack/assets/photography/analytics-background-panel.svg"
+          type="image/svg+xml"
+          aria-label="Real insights. Real growth. Analytics and reporting panel."
+        />
       </section>
 
       <section className="section">
