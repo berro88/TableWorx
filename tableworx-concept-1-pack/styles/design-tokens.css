@@ -1,0 +1,17 @@
+:root {
+  /* The two Steel accents were explicitly specified in the source conversation. */
+  --steel-700: #4a5f73;
+  --steel-400: #8a9aab;
+  /* Supporting shades are visual estimates from Concept 1.png. */
+  --ink: #101b24;
+  --midnight: #162734;
+  --slate: #263c4c;
+  --mist: #d4e1ed;
+  --paper: #f8fafc;
+  --white: #ffffff;
+  --green: #64c39a;
+  --font: Inter, "Helvetica Neue", Arial, sans-serif;
+  --shadow-device: 0 20px 48px rgba(0, 0, 0, .36);
+  --radius-card: 12px;
+  --radius-pill: 999px;
+}

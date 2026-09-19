@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <symbol id="payments" viewBox="0 0 40 40"><rect x="4" y="8" width="32" height="24" rx="3"/><path d="M4 15h32M10 23h9"/></symbol>
+  <symbol id="ordering" viewBox="0 0 40 40"><path d="M4 7h5l4 21h20l4-15H11M15 34h1m16 0h1"/></symbol>
+  <symbol id="reservations" viewBox="0 0 40 40"><rect x="5" y="8" width="30" height="27" rx="3"/><path d="M5 16h30M12 4v8M28 4v8"/></symbol>
+  <symbol id="inventory" viewBox="0 0 40 40"><path d="M20 4L34 12v17L20 37 6 29V12zM6 12l14 8 14-8M20 20v17M13 8l14 8"/></symbol>
+  <symbol id="staff" viewBox="0 0 40 40"><circle cx="17" cy="12" r="6"/><path d="M5 34v-4c0-7 5-11 12-11s12 4 12 11v4M27 7c4 0 7 3 7 7s-3 7-7 7M31 23c4 1 6 4 6 9v2"/></symbol>
+  <symbol id="loyalty" viewBox="0 0 40 40"><path d="M20 34L6 20C-1 12 8 3 16 9l4 4 4-4c8-6 17 3 10 11z"/></symbol>
+  <symbol id="analytics" viewBox="0 0 40 40"><path d="M5 33h6v-9H5zM17 33h6V15h-6zM29 33h6V6h-6z"/></symbol>
+  <symbol id="ecosystem" viewBox="0 0 40 40"><circle cx="20" cy="6" r="4"/><circle cx="6" cy="31" r="4"/><circle cx="34" cy="31" r="4"/><circle cx="20" cy="25" r="4"/><path d="M20 10v11M17 27l-8 3M23 27l8 3"/></symbol>
+  <symbol id="menu" viewBox="0 0 40 40"><path d="M9 7h22M9 15h22M9 23h22M9 31h22"/></symbol>
+  <symbol id="chevron" viewBox="0 0 40 40"><path d="M8 20h23M23 12l8 8-8 8"/></symbol>
+  <symbol id="play" viewBox="0 0 40 40"><path d="M15 10l15 10-15 10z"/></symbol>
+</svg>
