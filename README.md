@@ -1,6 +1,6 @@
 # TableWorx website
 
-Marketing site for TableWorx — offline-first KDS, Waiter App, and Customer App for independent restaurants.
+Marketing site for TableWorx — KDS, Waiter App, and Customer App for independent restaurants.
 
 ## Local
 
