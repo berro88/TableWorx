@@ -1506,6 +1506,69 @@ p {
 @media (max-width: 980px) {
   .hero {
     min-height: 0;
+    padding: calc(var(--header) + 2.2rem) 0 2.6rem;
+  }
+
+  /* the concept's device group is desktop art; mobile carries the copy */
+  .lineup-c1 {
+    display: none;
+  }
+
+  .hero .eyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 0.2em;
+  }
+
+  .hero h1 {
+    max-width: none;
+    font-size: clamp(2.15rem, 8.4vw, 3rem);
+    line-height: 1.02;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-sub {
+    max-width: 34rem;
+    margin-top: 1.1rem;
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    margin-top: 1.5rem;
+    gap: 0.75rem;
+  }
+
+
+  .strip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cap:nth-child(2n + 1) {
+    border-left: 0;
+  }
+
+  .cap:nth-child(n + 3) {
+    border-top: 1px solid var(--line);
+  }
+
+  .section,
+  .cta-band {
+    padding: 3.1rem 0;
+  }
+
+  .section-head {
+    margin-bottom: 1.4rem;
+  }
+
+  .cta-grid {
+    gap: 1.6rem;
+  }
+
+  .footer {
+    padding: 2.4rem 0 1.4rem;
+  }
+
+  .footer-grid {
+    gap: 1.7rem;
   }
 
   :root {
@@ -1540,9 +1603,6 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .hero {
-    padding-bottom: 2rem;
-  }
 
   .hero-inner {
     min-height: 0;
@@ -1625,20 +1685,78 @@ p {
 }
 
 @media (max-width: 620px) {
+  .header .brand {
+    font-size: 1.3rem;
+  }
+
+  .header .brand svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
   .header .btn {
+    min-height: 2.5rem;
+    padding: 0 0.95rem;
+    font-size: 0.82rem;
+  }
+
+  .header .btn span {
     display: none;
   }
 
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .play {
+    justify-content: center;
+    min-height: 3.05rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 999px;
+  }
+
+  /* capability strip reads as a list, not a grid of fragments */
   .strip-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
-  .cap:nth-child(2n + 1) {
+  .cap {
+    grid-template-columns: auto 1fr;
+    justify-items: start;
+    gap: 0 0.9rem;
+    padding: 0.85rem 1.25rem;
+    text-align: left;
+  }
+
+  .cap svg {
+    grid-row: span 2;
+    align-self: center;
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+
+  .cap b {
+    font-size: 0.92rem;
+  }
+
+  .cap span {
+    font-size: 0.82rem;
+  }
+
+  .cap + .cap {
     border-left: 0;
+    border-top: 1px solid var(--line);
   }
 
-  .cap:nth-child(n + 3) {
-    border-top: 1px solid var(--line);
+  /* footer link lists pair up instead of stacking four deep */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1.2rem;
+  }
+
+  .footer-grid > :first-child {
+    grid-column: 1 / -1;
   }
 
   .lineup {
@@ -1932,7 +2050,89 @@ p {
   border: 0;
 }
 
+.band-art {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0;
+}
+
+.band-copy {
+  display: none;
+}
+
+/* ---------- mobile demo bar (wireframe: persistent demo CTA) ---------- */
+
+.demo-bar {
+  display: none;
+}
+
 @media (max-width: 980px) {
+  .demo-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.4rem;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+
+  .band-art {
+    display: none;
+  }
+
+  .band-panel {
+    background: var(--night-panel);
+    color: #eaf1f6;
+  }
+
+  .band-panel:nth-child(2) {
+    background: var(--paper-alt);
+    color: var(--ink);
+  }
+
+  .band-panel:nth-child(3) {
+    background: var(--night);
+  }
+
+  .band-copy {
+    display: block;
+    padding: 2rem 1.5rem 2.2rem;
+  }
+
+  .band-copy .cap-label {
+    color: #8fa3b3;
+  }
+
+  .band-copy h2 {
+    margin-top: 0.45rem;
+    font-size: 1.7rem;
+  }
+
+  .band-copy h2 em {
+    display: block;
+    color: var(--accent-light);
+    font-style: normal;
+  }
+
+  .band-copy p:last-child {
+    margin-top: 0.8rem;
+    color: #a9bdcd;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .band-panel:nth-child(2) .band-copy .cap-label,
+  .band-panel:nth-child(2) .band-copy p:last-child {
+    color: var(--ink-soft);
+  }
+
+  .band-panel:nth-child(2) .band-copy h2 em {
+    color: var(--accent);
+  }
+
   .lineup-c1 {
     position: relative;
     inset: auto;
@@ -1978,12 +2178,6 @@ p {
 }
 
 @media (max-width: 620px) {
-  .lineup-c1 {
-    min-height: 0;
-    display: grid;
-    gap: 1rem;
-  }
-
   .lineup-connectors,
   .lineup-p5,
   .lineup-d80b,
@@ -2049,5 +2243,11 @@ p {
   .lineup-node.is-active .lineup-node-icon {
     transform: none;
     filter: none;
+  }
+}
+
+@media (max-width: 379px) {
+  .header .btn {
+    display: none;
   }
 }
