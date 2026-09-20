@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "TableWorx builds offline-first restaurant technology for independent restaurants in South Africa.",
+    "TableWorx builds web-based restaurant technology for independent restaurants in South Africa.",
 };
 
 export default function AboutPage() {
@@ -28,8 +28,8 @@ export default function AboutPage() {
         <h2>Who it is for</h2>
         <p>
           Independent restaurants and small groups that need a KDS, a waiter
-          tool, and a guest QR experience that still works when the Wi-Fi does
-          not. We are not a generic all-purpose SaaS template.
+          tool, and a guest QR experience — with no local server to host.
+          We are not a generic all-purpose SaaS template.
         </p>
         <h2>Leadership</h2>
         <p>

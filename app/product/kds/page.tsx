@@ -5,7 +5,7 @@ import { KdsScreen } from "@/components/Devices";
 export const metadata: Metadata = {
   title: "Kitchen Display System",
   description:
-    "TableWorx KDS routes every order to the right station, colour-coded from queue to ready, and keeps working offline.",
+    "TableWorx KDS routes every order to the right station, colour-coded from queue to ready — in the browser, with no local server.",
 };
 
 const features = [
@@ -37,7 +37,7 @@ export default function KdsPage() {
             <h1>TableWorx KDS</h1>
             <p className="lede" style={{ marginTop: "1rem" }}>
               A kitchen display that organises the chaos. Every order is routed
-              with station-level precision, even when the internet is gone.
+              with station-level precision, and nothing to host on site.
             </p>
             <div className="hero-actions">
               <Link className="btn" href="/demo">

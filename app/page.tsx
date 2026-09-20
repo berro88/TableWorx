@@ -122,26 +122,16 @@ export default function HomePage() {
         <div className="wrap split">
           <div>
             <p className="kicker">The differentiator</p>
-            <h2>Why offline-first matters</h2>
+            <h2>No local servers. No clutter.</h2>
             <p className="lede" style={{ marginTop: "0.9rem" }}>
-              Restaurant Wi-Fi drops. Mobile signals fail. TableWorx stores
-              every order, menu update, and payment locally first — then syncs
-              the moment connectivity returns. Service never pauses, the kitchen
-              never goes dark, and guests never see an error screen.
+              TableWorx is web-based. There is no local hosting or storage to
+              maintain — no back-office box, fewer cables, less clutter. Clean,
+              professional, simple.
             </p>
             <div className="status-row">
-              <span className="chip">
-                <span className="dot" style={{ background: "var(--queue)" }} />
-                Queue
-              </span>
-              <span className="chip">
-                <span className="dot" style={{ background: "var(--prep)" }} />
-                Preparing
-              </span>
-              <span className="chip">
-                <span className="dot" style={{ background: "var(--ready)" }} />
-                Ready
-              </span>
+              <span className="chip">No local servers</span>
+              <span className="chip">Fewer cables</span>
+              <span className="chip">Runs in the browser</span>
             </div>
           </div>
           <div
@@ -152,12 +142,12 @@ export default function HomePage() {
               color: "#eaf1f6",
             }}
           >
-            <p className="kicker">Local first</p>
-            <h3>The ticket lives on the device</h3>
+            <p className="kicker">Zero on-site infrastructure</p>
+            <h3>Nothing to host in the restaurant</h3>
             <p className="lede" style={{ marginTop: "0.7rem", color: "#a9bdcd" }}>
-              The waiter app, guest browser, and KDS keep working on the floor
-              network. When the internet comes back, nothing is re-keyed and
-              nothing is lost.
+              Orders, payments, and the kitchen display live in the cloud. Staff
+              and guests use the same web platform — no local server, no extra
+              hardware stack to keep alive.
             </p>
           </div>
         </div>

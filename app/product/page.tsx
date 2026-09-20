@@ -6,7 +6,7 @@ import { pillars } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Product",
   description:
-    "TableWorx KDS, Waiter App, and Customer App — three products, one offline-first restaurant platform.",
+    "TableWorx KDS, Waiter App, and Customer App — three products, one web-based restaurant platform.",
 };
 
 export default function ProductPage() {

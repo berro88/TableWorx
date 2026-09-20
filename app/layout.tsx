@@ -19,7 +19,7 @@ const body = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} — Restaurant technology that stays online`,
+    default: `${site.name} — Web-based restaurant technology`,
     template: `%s · ${site.name}`,
   },
   description: site.description,

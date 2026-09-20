@@ -3,7 +3,7 @@ export const site = {
   legalName: "TableWorx (Pty) Ltd",
   tagline: "Everything works better together.",
   description:
-    "One connected ecosystem for restaurants. Orders, payments, reservations, staff, inventory and insights — all in sync, online or offline.",
+    "One connected ecosystem for restaurants. Orders, payments, reservations, staff, inventory and insights — all in sync, with no local server to host.",
   url: "https://tableworx.co.za",
   email: "info@tableworx.co.za",
   phone: "+27 71 869 8758",
@@ -45,7 +45,7 @@ export const lineupNodes = [
     x: 19,
     y: 3,
     title: "Orders that never stall",
-    body: "Send tickets from the floor, QR, and counter. The kitchen sees them the moment they leave the table — online or off.",
+    body: "Send tickets from the floor, QR, and counter. The kitchen sees them the moment they leave the table.",
     href: "/product/waiter",
     image: "/images/lineup/orders.png",
   },
@@ -55,7 +55,7 @@ export const lineupNodes = [
     x: 32,
     y: -1,
     title: "Pay at the table or the till",
-    body: "Tap, chip, swipe, and split bills in one flow. Payments keep moving even if the restaurant Wi-Fi does not.",
+    body: "Tap, chip, swipe, and split bills in one flow — at the table or the till, with no local server in the way.",
     href: "/product/customer",
     image: "/images/lineup/payments.png",
   },
@@ -117,11 +117,11 @@ export const pillars = [
     href: "/product/kds",
     kicker: "Kitchen",
     name: "TableWorx KDS",
-    summary: "Station-specific tickets that keep the pass moving — even when the Wi-Fi does not.",
+    summary: "Station-specific tickets that keep the pass moving — in the browser, with nothing to host on site.",
     bullets: [
       "Real-time order display across every kitchen station",
       "Colour-coded status: queue, preparing, ready",
-      "Works offline — orders never drop",
+      "Web-based — no local server required",
     ],
   },
   {
@@ -190,6 +190,6 @@ export const hardware = [
     code: "T2",
     name: "Tableside Tablet",
     body: "Menu and ordering tablet for the table or the host stand, with photography-first menus and allergen tags.",
-    specs: ["Visual menu browsing", "Runs the guest app", "Charging stand", "Offline-first sync"],
+    specs: ["Visual menu browsing", "Runs the guest app", "Charging stand", "Cloud sync"],
   },
 ] as const;

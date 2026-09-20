@@ -17,7 +17,7 @@ export default function HardwarePage() {
           <h1>All devices. All connected.</h1>
           <p className="lede" style={{ marginTop: "1rem" }}>
             Terminals, handhelds, printers, and tablets that run the same
-            offline-first platform. Buy what the floor needs and add the rest as
+            web-based platform. Buy what the floor needs and add the rest as
             you grow.
           </p>
         </div>
