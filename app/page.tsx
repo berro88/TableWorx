@@ -28,8 +28,12 @@ export default function HomePage() {
               Everything works better <em>together.</em>
             </h1>
             <p className="hero-sub">
-              One connected ecosystem for restaurants. Orders, payments,
-              reservations, staff, inventory and insights — all in sync, so you
+              One connected ecosystem for restaurants.{" "}
+              <br />
+              Orders, payments, reservations, staff,{" "}
+              <br />
+              inventory and insights — all in sync, so you{" "}
+              <br />
               can focus on great food and happy guests.
             </p>
             <div className="hero-actions">
