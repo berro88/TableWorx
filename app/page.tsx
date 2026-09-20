@@ -14,6 +14,30 @@ const capabilityIconByKey: Record<string, string> = {
   nodes: "ecosystem",
 };
 
+const bandPanels = [
+  {
+    art: "/tableworx-concept-1-pack/assets/photography/chef-hospitality-panel.svg",
+    kicker: "Built for restaurants like yours",
+    title: "Less admin.",
+    accent: "More time for what matters.",
+    body: "Fewer taps between the order and the pass, so the team spends the shift on the food and the room.",
+  },
+  {
+    art: "/tableworx-concept-1-pack/assets/photography/mobile-hospitality-panel.svg",
+    kicker: "Mobile. Flexible. Always connected.",
+    title: "Power",
+    accent: "in your hands.",
+    body: "Take orders, accept payments and serve anywhere with the P5.",
+  },
+  {
+    art: "/tableworx-concept-1-pack/assets/photography/analytics-background-panel.svg",
+    kicker: "Data that drives progress",
+    title: "Real insights.",
+    accent: "Real growth.",
+    body: "Turn today's service into a stronger tomorrow with powerful analytics and reporting.",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -28,8 +52,12 @@ export default function HomePage() {
               Everything works better <em>together.</em>
             </h1>
             <p className="hero-sub">
-              One connected ecosystem for restaurants. Orders, payments,
-              reservations, staff, inventory and insights — all in sync, so you
+              One connected ecosystem for restaurants.{" "}
+              <br />
+              Orders, payments, reservations, staff,{" "}
+              <br />
+              inventory and insights — all in sync, so you{" "}
+              <br />
               can focus on great food and happy guests.
             </p>
             <div className="hero-actions">
@@ -41,8 +69,8 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <Lineup />
         </div>
+        <Lineup />
         <p className="ppp" aria-hidden="true">
           People
           <br />
@@ -51,6 +79,10 @@ export default function HomePage() {
           Possibilities
         </p>
       </section>
+
+      <Link className="demo-bar" href="/demo">
+        Book a demo
+      </Link>
 
       <section className="strip" aria-label="Platform capabilities">
         <div className="strip-grid">
@@ -69,21 +101,23 @@ export default function HomePage() {
       </section>
 
       <section className="band-crops" aria-label="Why restaurants choose TableWorx">
-        <object
-          data="/tableworx-concept-1-pack/assets/photography/chef-hospitality-panel.svg"
-          type="image/svg+xml"
-          aria-label="Built for restaurants like yours. Less admin. More time for what matters."
-        />
-        <object
-          data="/tableworx-concept-1-pack/assets/photography/mobile-hospitality-panel.svg"
-          type="image/svg+xml"
-          aria-label="Power in your hands. Take orders, accept payments and serve anywhere with the P5."
-        />
-        <object
-          data="/tableworx-concept-1-pack/assets/photography/analytics-background-panel.svg"
-          type="image/svg+xml"
-          aria-label="Real insights. Real growth. Analytics and reporting panel."
-        />
+        {bandPanels.map((panel) => (
+          <article className="band-panel" key={panel.art}>
+            <object
+              className="band-art"
+              data={panel.art}
+              type="image/svg+xml"
+              aria-hidden="true"
+            />
+            <div className="band-copy">
+              <p className="cap-label">{panel.kicker}</p>
+              <h2>
+                {panel.title} <em>{panel.accent}</em>
+              </h2>
+              <p>{panel.body}</p>
+            </div>
+          </article>
+        ))}
       </section>
 
       <section className="section">
