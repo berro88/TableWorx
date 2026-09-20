@@ -41,8 +41,8 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <Lineup />
         </div>
+        <Lineup />
         <p className="ppp" aria-hidden="true">
           People
           <br />
