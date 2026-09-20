@@ -49,7 +49,6 @@ export default function HomePage() {
           Places
           <br />
           Possibilities
-          <hr />
         </p>
       </section>
 

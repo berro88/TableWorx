@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Inventory button, hover state">
+  <defs>
+    <linearGradient id="surface" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#667E92"/><stop offset=".55" stop-color="#2B3944"/><stop offset="1" stop-color="#253949"/></linearGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#E7E9EB" stop-opacity=".92"/><stop offset=".52" stop-color="#E7E9EB" stop-opacity=".24"/><stop offset="1" stop-color="#8A9AAB" stop-opacity=".72"/></linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#F7F8F9" stop-opacity=".25"/><stop offset=".5" stop-color="#F7F8F9" stop-opacity=".045"/><stop offset="1" stop-color="#F7F8F9" stop-opacity="0"/></linearGradient>
+    <radialGradient id="blueGlow"><stop stop-color="#8A9AAB" stop-opacity="0.35"/><stop offset="1" stop-color="#8A9AAB" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="15"/></filter>
+    <clipPath id="tileClip"><rect x="48" y="48" width="416" height="416" rx="84"/></clipPath>
+  </defs>
+  <rect x="56" y="66" width="400" height="400" rx="82" fill="#111315" opacity=".42" filter="url(#shadow)"/>
+  <rect x="48" y="48" width="416" height="416" rx="84" fill="url(#surface)"/>
+  <g clip-path="url(#tileClip)"><ellipse cx="360" cy="405" rx="240" ry="200" fill="url(#blueGlow)"/><path d="M48 48H464V265Q250 213 48 270Z" fill="url(#sheen)"/></g>
+  <rect x="49.5" y="49.5" width="413" height="413" rx="82.5" fill="none" stroke="url(#rim)" stroke-width="3"/>
+  <path d="M124 72Q85 74 73 126" fill="none" stroke="#F7F8F9" stroke-opacity=".46" stroke-width="3" stroke-linecap="round"/>
+  
+  <g transform="translate(116 116) scale(11.666667)" fill="none" stroke="#FFFFFF" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="12,2.5 20,6.8 20,17.2 12,21.5 4,17.2 4,6.8 12,2.5"/>
+    <polyline points="4,6.8 12,11.2 20,6.8"/>
+    <line x1="12" y1="11.2" x2="12" y2="21.5"/>
+    <line x1="8" y1="4.7" x2="16" y2="9.1"/>
+  </g>
+</svg>
