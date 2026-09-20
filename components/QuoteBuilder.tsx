@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   acquisitionOptions,
   defaultTerm,
@@ -61,6 +61,9 @@ export function QuoteBuilder() {
   const [modules, setModules] = useState<string[]>(["guest", "analytics"]);
   const [services, setServices] = useState<string[]>(["install", "menu", "training"]);
 
+  const summaryRef = useRef<HTMLElement | null>(null);
+  const [summaryOnScreen, setSummaryOnScreen] = useState(false);
+
   const [details, setDetails] = useState({ client: "", contact: "", consultant: "" });
   const [issued, setIssued] = useState({ date: "", validUntil: "", reference: "" });
 
@@ -76,6 +79,18 @@ export function QuoteBuilder() {
     setIssued({ date: fmt(now), validUntil: fmt(until), reference: ref });
   }, []);
 
+  // The floating total is redundant once the full summary is in view.
+  useEffect(() => {
+    const el = summaryRef.current;
+    if (!el || typeof IntersectionObserver === "undefined") return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setSummaryOnScreen(entry.isIntersecting),
+      { rootMargin: "-80px 0px -120px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const lines = useMemo<QuoteLine[]>(() => {
     const out: QuoteLine[] = [];
 
@@ -88,7 +103,7 @@ export function QuoteBuilder() {
       out.push({
         key: `${group}-${item.code}`,
         group,
-        label: `${item.code} — ${item.name}`,
+        label: item.name,
         detail:
           line.acquisition === "purchase"
             ? `${label} · ${formatRand(item.price)} each`
@@ -192,7 +207,7 @@ export function QuoteBuilder() {
           <select value={line.code} onChange={(e) => setLine({ ...line, code: e.target.value })}>
             {hardwareByRole(role).map((item) => (
               <option key={item.code} value={item.code}>
-                {item.code} — {item.name}
+                {item.name}
               </option>
             ))}
           </select>
@@ -370,7 +385,7 @@ export function QuoteBuilder() {
               return (
                 <div className="q-row q-row-tight" key={code}>
                   <label>
-                    <span>{item.code}</span>
+                    <span>Device</span>
                     <p className="q-peri">{item.name}</p>
                   </label>
                   <label className="q-qty">
@@ -506,7 +521,7 @@ export function QuoteBuilder() {
           </div>
         </div>
 
-        <aside className="q-summary">
+        <aside className="q-summary" id="quote-summary" ref={summaryRef}>
           <div className="q-summary-inner">
             <div className="q-letterhead" aria-hidden="true">
               <div>
@@ -601,6 +616,18 @@ export function QuoteBuilder() {
             </button>
           </div>
         </aside>
+      </div>
+
+      <div className={summaryOnScreen ? "q-sticky is-hidden" : "q-sticky"}>
+        <div>
+          <span>Monthly</span>
+          <b>{formatRand(totals.monthly)}</b>
+        </div>
+        <div>
+          <span>Once off</span>
+          <b>{formatRand(totals.onceOff)}</b>
+        </div>
+        <a href="#quote-summary">Full quote</a>
       </div>
     </div>
   );
